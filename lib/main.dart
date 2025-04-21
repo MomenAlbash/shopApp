@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:shopapp/views/onBoardingView.dart';
 
 void main(){
   runApp(shopApp());
@@ -7,6 +8,8 @@ class shopApp extends StatelessWidget {
   const shopApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home:const onBoardingView(),
+    );
   }
 }
