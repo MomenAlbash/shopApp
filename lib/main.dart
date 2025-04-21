@@ -9,7 +9,8 @@ class shopApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:const onBoardingView(),
+      debugShowCheckedModeBanner: false,
+      home: onBoardingView(),
     );
   }
 }

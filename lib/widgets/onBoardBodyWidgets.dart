@@ -1,31 +1,36 @@
 
 import 'package:flutter/material.dart';
+import 'package:shopapp/Models/onBoardModel.dart';
 
 class onBoardBodyWidget extends StatelessWidget {
+
   const onBoardBodyWidget({
+    required this.onboardModel,
     Key? key,
   }) : super(key: key);
+  final onBoardModel onboardModel;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          height: 600,
-          width: double.infinity,
-          child: const Image(
-            image: AssetImage('assets/images/images (8).jpg'),
+        Expanded(
+          child: Container(
+            width: double.infinity,
+            child:  Image(
+              image: AssetImage(onboardModel.image),
+            ),
           ),
         ),
-        const Text(
-          'On Board 1 Title',
-          style: TextStyle(fontSize: 24),
+         Text(
+        onboardModel.title,
+          style: const TextStyle(fontSize: 24),
         ),
         const SizedBox(
           height: 20,
         ),
-        const Text('On Board 1 Body'),
+         Text(onboardModel.subtitle),
       ],
     );
   }
